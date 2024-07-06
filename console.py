@@ -127,11 +127,9 @@ class HBNBCommand(cmd.Cmd):
         new_instance = HBNBCommand.classes[list_t[0]]()
         i = 1
         dictionary = {}
-        print(list_t)
         #for key in range(1, len(list_t)):
         #   list_t[key] = list_t[key].replace('\'', '\"')
             
-        print(list_t)
         i = 1
         key = 1
         dic_t = new_instance.to_dict()
@@ -139,7 +137,7 @@ class HBNBCommand(cmd.Cmd):
             attr_name, attr_value = list_t[key].split('=')
             if (attr_value.startswith('"') and attr_value.endswith('"')) or (attr_value.startswith("'") and attr_value.endswith("'")):
                 attr_value = attr_value[1:-1]
-
+            attr_value = attr_value.replace('_', ' ')
 
             setattr(new_instance, attr_name, attr_value)
             i = i + 1
