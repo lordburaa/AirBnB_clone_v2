@@ -69,5 +69,6 @@ class FileStorage:
                 if value == obj:
                     del FileStorage.__objects[key]
                     self.save()
+                    self.reload()
                     break
                     
