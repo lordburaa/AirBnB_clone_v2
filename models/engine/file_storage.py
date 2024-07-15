@@ -22,7 +22,7 @@ class FileStorage:
             #    FileStorage.__objects = {}
             #    FileStorage.__objects.update(dict_t)
             return dict_t
-        """return FileStorage.__objects
+        """
         if not cls:
             return self.__objects
         elif type(cls) == str:
