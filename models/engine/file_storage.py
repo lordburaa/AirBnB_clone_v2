@@ -19,10 +19,10 @@ class FileStorage:
                 if base == cls:
                     
                     dict_t[key] = value
-            if dict_t:
-                FileStorage.__objects = {}
-                FileStorage.__objects.update(dict_t)
-
+            #if dict_t:
+            #    FileStorage.__objects = {}
+            #    FileStorage.__objects.update(dict_t)
+            return dict_t
         return FileStorage.__objects
 
     def new(self, obj):
