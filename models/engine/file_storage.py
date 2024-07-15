@@ -21,7 +21,7 @@ class FileStorage:
                     dict_t[key] = value
             if dict_t:
                 FileStorage.__objects = {}
-                FileStorage.__objects = dict_t
+                FileStorage.__objects.update(dict_t)
 
         return FileStorage.__objects
 
