@@ -21,7 +21,10 @@ class FileStorage:
             #if dict_t:
             #    FileStorage.__objects = {}
             #    FileStorage.__objects.update(dict_t)
-            return dict_t
+            if dict_t:
+                FileStorage.__objects = {}
+                FileStorage.__objects.update(dict_t)
+                self.save()  
         return FileStorage.__objects
         """
         if not cls:
